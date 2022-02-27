@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>show_detail</title>
+</head>
+<body>
+    <a href="/summary">Go Back</a>
+    <h2>Detail Expense for Expense Id {{one_expense.id}}</h2>
+
+    <p>Title: {{one_expense.expenseTitle}}</p>
+    <p>Amount: {{one_expense.amount}}</p>
+    <p>Category: {{one_expense.category}}</p>
+    <p>Description: {{one_expense.description}}</p>
+    <p>Created: {{one_expense.created_at}}</p>
+    <p>Submitted by: {{one_expense.submitter.fname}} {{one_expense.submitter.lname}}</p>
+
+    <a href="/edit/{{one_expense.id}}" class="btn btn-xs btn-primary">
+        <i class="far fa-edit"></i>| <a href="/delete/{{one_expense.id}}" class="btn btn-xs btn-primary">
+        <i class="far fa-trash-alt"></i>
+    </a>
+</html>

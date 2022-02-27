@@ -1,0 +1,74 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Summary</title>
+<!--    <link rel="stylesheet" href="../css/style.css">-->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+<h1 class="text-warning text-center">Expense Dashboard</h1>
+
+    <ul class="nav nav-navs">
+        <li class="nav-item ">
+            <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+        </li>
+    </ul>
+
+        <a href="/addexpense" class="btn btn-xs btn-primary">
+            <i class="far fa-plus-square"></i>
+        </a>
+
+    <table table class="table-striped table-bordered table-hover">
+        <thead>
+        <tr>
+            <td class="text-success text-center">ID</td>
+            <td class="text-success text-center">Title</td>
+            <td class="text-success text-center">Amount</td>
+            <td class="text-success text-center">Category</td>
+            <td class="text-success text-center">Submitter</td>
+            <td class="text-success text-center"> Description</td>
+            <td class="text-success text-center"> Date Submitted</td>
+            <td class="text-success text-center"> Action</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            {% for expense in all_expenses %}
+            <td>{{expense.id}}</td>
+            <td>{{expense.expenseTitle}}</td>
+            <td>{{expense.amount}}</td>
+            <td>{{expense.category}}</td>
+            <td>{{expense.submitter.fname}} {{expense.submitter.lname}}</td>
+            <td>{{expense.description}}</td>
+            <td>{{expense.created_at}}</td>
+            <td><a href="/expenses/{{expense.id}}" class="btn btn-xs btn-primary">
+                <i class="far fa-search"></i>
+                <a href="/edit/{{expense.id}}" class="btn btn-xs btn-primary">
+                <i class="far fa-edit"></i>
+            </a> 
+            <a href="/delete/{{expense.id}}" class="btn btn-xs btn-primary">
+                <i class="far fa-trash-alt"></i>
+            </a></td>
+            </tr>
+        </br>
+            {% endfor %}
+        </tr>
+        </tbody>
+    </table>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
