@@ -65,6 +65,15 @@ def process_expense(request):
     submitter=my_user 
     )
     return redirect(f'/expenses/{new_expense.id}')
+def process_edit(request):
+    expense_id=request.POST['expense_id']
+    edit_expense= Expense.objects.get(id=expense_id)
+    edit_expense.expenseTitle=request.POST['expenseTitle']
+    edit_expense.amount=request.POST['amount']
+    edit_expense.status=request.POST['category']
+    edit_expense.description=request.POST['description']
+    edit_expense.save()
+    return redirect('/summary')
 
 def one_expense(request,expense_id):
     context={

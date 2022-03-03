@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Edit job</title>
 </head>
 <body>
@@ -31,6 +36,33 @@
         </ul>
         
         </hr>
+        <div class="wrapper justify-content-center">
+            <form action="/process_edit" method="post">
+                {%csrf_token%}
+                <input value="{{expense.id}}" type="hidden" name="id">
+                <div class="form-group">
+                    <label for="expenseTitle"> Expense Title</label>
+                    <input type="text" name="expenseTitle" value="{{expense.expenseTitle}}"id ="expenseTitle" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label> Amount</label>
+                    <input type="number" name="amount" value="{{expense.amount}}"class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <input type="text" name="category" value="{{expense.category}}"class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label for="description"> Description</label>
+                    <!-- <textarea type="text" value="{{expense.description}}" name="description"id="comments" rows="10" cols="30" class="form-control"> -->
+                    <input type="text" value="{{expense.description}}" class="form-control" name="description" id="description" required>
+                    </input>
+
+                </div>
+                <input class="btn btn-primary mb-2" type="submit" value="submit" >
+                <input name="expense_id" value="{{expense.id}}" type="hidden">
+            </form>
+            </div>
 
 
 </body>
