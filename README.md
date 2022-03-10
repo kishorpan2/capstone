@@ -42,7 +42,7 @@ delete expense
 # Summary
 summary page to find all the expense summary in one place
 
-Deploymenet steps:
+# Deploymenet steps:
 Django deployment in EC2
 
 Login in to AWS Console
@@ -179,3 +179,4 @@ Pemba Sherpa
 
 # References
 https://docs.djangoproject.com/en/4.0/
+coding dojo
