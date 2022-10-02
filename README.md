@@ -212,8 +212,8 @@ http://{{your public ec2 ip}}
 
 ```
 ## Contributors:
-**Kishor Pandey**
-**Pemba Sherpa**
+-Kishor Pandey**
+-Pemba Sherpa**
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
