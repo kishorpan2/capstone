@@ -166,7 +166,7 @@ sudo journalctl -u gunicorn.socket
 ```
 the following command is a very useful command, If you get an HTML for your index page then you are on the right path
 ```
-***curl --unix-socket /run/gunicorn.sock localhost***
+curl --unix-socket /run/gunicorn.sock localhost
 ```
 ```
 file /run/gunicorn.sock
