@@ -212,12 +212,12 @@ http://{{your public ec2 ip}}
 
 ```
 ## Contributors:
--Kishor Pandey
--Pemba Sherpa
+- Kishor Pandey
+- Pemba Sherpa
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
 # References
-https://docs.djangoproject.com/en/4.0/
-https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-20-04
+- https://docs.djangoproject.com/en/4.0/
+- https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-20-04
