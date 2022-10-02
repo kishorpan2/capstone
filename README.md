@@ -95,8 +95,8 @@ source myprojectenv/bin/activate
 Install all the necessary requirements using the following commands:
 ```
 pip install django==4.0
-pip install bcrypt to install bcrypt
-pip install gunicorn to install gunicorn
+pip install bcrypt 
+pip install gunicorn 
 ```
 Cd into the project name
 ```
